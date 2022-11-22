@@ -1,0 +1,47 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Dosis", sans-serif;
+}
+header {
+  background-color: #054662;
+}
+nav {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px;
+}
+nav img {
+  width: 200px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  width: 30%;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+nav ul li a:hover {
+  color: #4a9fb1;
+}
+
+.servicios {
+  width: 50%;
+}
