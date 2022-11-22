@@ -56,7 +56,7 @@ article {
   align-items: center;
 }
 
-.Gratis form {
+.formulario form {
   width: 100%;
   height: auto;
   background-color: #bfe0ee2c;
@@ -70,28 +70,28 @@ article {
   font-weight: 550;
 }
 
-.Gratis form input {
+.formulario form input {
   font-family: "Dosis", sans-serif;
   width: 80%;
   padding: 10px;
-  color: #4a9fb1;
+  color: #000000;
   font-size: 20px;
   margin: 5px;
   border-radius: 10px;
   border: 2px solid #4a9fb1;
 }
-.Gratis form textarea {
+.formulario form textarea {
   font-family: "Dosis", sans-serif;
   width: 80%;
   padding: 10px;
-  color: #4a9fb1;
+  color: #000000;
   font-size: 20px;
   margin: 5px;
   border-radius: 10px;
   border: 2px solid #4a9fb1;
 }
 
-.Gratis form button {
+.formulario form button {
   padding: 10px;
   font-family: "Raleway", sans-serif;
   font-size: 18px;
@@ -105,44 +105,42 @@ article {
   cursor: pointer;
 }
 
-.Gratis form button:hover {
+.formulario form button:hover {
   background-color: #4a9fb1;
   box-shadow: 1px 1px 20px #05466276;
 }
 
-.Gratis form h2 {
+.formulario form h2 {
   color: #4a9fb1;
   font-size: 30px;
   font-weight: 900;
 }
-.Gratis form p {
+.formulario form p {
   color: rgb(0, 0, 0);
   font-size: 23px;
   font-weight: 550;
 }
 
-.Gratis form label {
+.formulario form label {
   color: #054662;
   font-size: 23px;
   font-weight: 600;
 }
-.Gratis form ul {
+.formulario form ul {
   margin-left: 20px;
 }
 
-.Gratis form input::placeholder {
-  color: rgb(135, 135, 135);
+.formulario form input::placeholder {
+  color: #4a9fb1;
   font-size: 20px;
 }
-.Gratis form textarea::placeholder {
-  color: rgb(135, 135, 135);
+.formulario form textarea::placeholder {
+  color: #4a9fb1;
   font-size: 20px;
 }
 
-.Gratis form h3 {
-  font-size: 27px;
-  color: #b7aef1;
-  font-weight: bolder;
+section {
+  height: 100px;
 }
 footer {
   display: flex;
@@ -151,6 +149,7 @@ footer {
   justify-content: space-evenly;
   align-items: center;
   background-color: #054662;
+  padding: 20px;
 }
 .secciones {
   width: 100%;
@@ -173,7 +172,6 @@ footer img {
 }
 
 footer ul {
-  margin: 30px 0px 0px 40px;
   list-style: none;
 }
 footer ul li a {
@@ -182,7 +180,7 @@ footer ul li a {
 }
 footer ul li a:hover {
   text-decoration: none;
-  color: #8b37ae;
+  color: #4a9fb1;
 }
 .redes {
   width: 50%;
