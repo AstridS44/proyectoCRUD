@@ -43,14 +43,28 @@
            
              <br/><br/>
              
-             <button>Crear actividad</button>
+             <button onclick="createCampo()">Crear actividad</button>
+             <button onclick="readItems()">Muestra actividad</button>
+            
              
              
           </form>
           
         </div>
       </article>   
-      <section></section>
+      <section>
+        <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Actividad</th>
+            <th scope="col">Descripción</th>
+          </tr>
+        </thead>
+        
+
+        <tbody id="table-body"></tbody>
+      </table></section>
       <footer>
         <div class="secciones">
          <img src="./images/logo_original.png" alt="logoblanco">
@@ -70,5 +84,8 @@
           <a href="#"><img src="./images/instagram.png" alt="logoinstagram"></a>
         </div>
       </footer>
+      <script src="./storage.js" type="text/javascript"></script>
+      <script src="./index.js" type="text/javascript"></script>
+      
   </body>
 </html>
