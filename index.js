@@ -14,6 +14,7 @@ function createCampo() {
 
   const newUser = new User(id, actividad, descripcion); //llamo clase creación de usuario enviando parametros
   users.createItem(newUser); //llamo clase de crear item y le envío el objeto
+  populateTable(users.readItems()); //llamo funcion usando datos traidos del loscalSatorge con la funcion read
 }
 
 function getInputData() {
@@ -43,3 +44,29 @@ function generateId() {
   }
   return resultado;
 }
+
+function populateTable(users) {
+  const tbody = document.getElementById("table-body"); //capturo info del cuerpo de la tabla
+  tbody.innerHTML = ""; //le que vacie el cuerpo de la tabla
+  users.forEach((user) => tbody.appendChild(createTr(user))); //ahora voy a recorrer mi objeto y le voy a enviar el dato a una fila de la tabla, aquí llamo esa funcion y le mando el dato
+}
+
+function createTr(user) {
+  const tdHTML = `<td>${user.getId()}</td>
+  <td>${user.getActividad()}</td>
+  <td>${user.getDescripcion()}</td>
+  <td><button id="btonborrar"  type="button" class="botoncito" >Borrar Actividad</button><td> `;
+  const tr = document.createElement("tr");
+  tr.innerHTML = tdHTML;
+  return tr;
+}
+
+function Crearboton() {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.innerText = "Editar";
+  document.body.appendChild(button);
+}
+window.onload = () => {
+  populateTable(users.readItems());
+};

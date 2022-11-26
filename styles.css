@@ -91,7 +91,7 @@ article {
   border: 2px solid #4a9fb1;
 }
 
-.formulario form button {
+.botoncito {
   padding: 10px;
   font-family: "Raleway", sans-serif;
   font-size: 18px;
@@ -105,7 +105,7 @@ article {
   cursor: pointer;
 }
 
-.formulario form button:hover {
+.botoncito:hover {
   background-color: #4a9fb1;
   box-shadow: 1px 1px 20px #05466276;
 }

@@ -18,7 +18,7 @@ class Storage {
   }
 
   saveStorage(storage) {
-    //Guardo en el localStorage la info
+    //Guardo en el localStorage la info con clave e info
     localStorage.setItem(this.key, JSON.stringify(storage));
   }
 
@@ -34,10 +34,9 @@ class Storage {
 
   // CRUD
   createItem(item) {
-    const current = this.parseStorage();
-    item.id = this.getNextId(current);
-    current.push(item);
-    this.saveStorage(current);
+    const current = this.parseStorage(); //capturo info actual del local storage y asigno
+    current.push(item); //asigno info del objeto actual
+    this.saveStorage(current); //llamo funcion de guardar el localStorge
   }
 
   readItems() {
