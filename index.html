@@ -26,7 +26,7 @@
     </header>
 
     <article class="formulario">
-        <form>
+        <form  id="formu">
           <h2>CREACIÓN DE ACTIVIDADES</h2><br>
           <p>Estimado profesor a continuación podrá crear algunas actividades, estas estarán disponibles en un banco de actividades para usted y sus colegas cuando lo requieran. </p>
           <ul><li>Ingrese el título de la actividad en la sección "Actividad".</li>
@@ -35,6 +35,7 @@
         <li>Posterior a la creación puede acceder a esta en la parte inferior, podrá editarla o eliminarla si así lo requiere.</li></ul> <p></p> 
           <br/>
           <p><br></p>
+          <input type="hidden" class="form-control" name="id" />
              <label for="">Actividad</label><br>
              <input type="text" name="actividad" id="actividad" placeholder="Nombre de la actividad">
              <p><br></p>
@@ -44,7 +45,7 @@
              <br/><br/>
              
              <button onclick="createCampo()">Crear actividad</button>
-             <button onclick="readItems()">Muestra actividad</button>
+             
             
              
              
