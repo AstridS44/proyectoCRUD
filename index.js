@@ -61,12 +61,12 @@ function createTr(user) {
   return tr;
 }
 
-function Crearboton() {
+/*function Crearboton() {
   const button = document.createElement("button");
   button.type = "button";
   button.innerText = "Editar";
   document.body.appendChild(button);
-}
+}*/
 window.onload = () => {
   populateTable(users.readItems());
 };

@@ -7,6 +7,7 @@ class User {
   }
 
   static fromObject(data) {
+    //devuelvo el usuario creado
     return new User(data["id"], data["actividad"], data["descripcion"]);
   }
   getId() {
