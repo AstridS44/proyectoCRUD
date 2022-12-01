@@ -228,7 +228,7 @@ footer ul li a:hover {
   width: 200px;
   color: #fff;
   cursor: pointer;
-  visibility: hidden;
+  /*visibility: hidden;*/
 }
 
 .botoncito3:hover {

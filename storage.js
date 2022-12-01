@@ -1,5 +1,5 @@
-//Clase crea un campo
 class Storage {
+  //Clase crea un objeto actividad
   constructor(key, converter) {
     this.key = key;
     this.converter = converter;
@@ -15,7 +15,7 @@ class Storage {
 
   parseStorage() {
     //traigo info del campo y aplico Jason
-    this.createStorage();
+    // this.createStorage();
     return JSON.parse(localStorage.getItem(this.key)).map((i) =>
       this.converter(i)
     );
@@ -23,7 +23,7 @@ class Storage {
 
   saveStorage(storage) {
     //Guardo en el localStorage la info con clave e info
-    this.createStorage();
+    // this.createStorage();
     localStorage.setItem(this.key, JSON.stringify(storage));
   }
 
@@ -33,15 +33,6 @@ class Storage {
       return [current[index], index]; //si es igual al que traido me retorna el un arreglo con el objeto y su indice
     }
     return null;
-  }
-  getNextId(storage) {
-    //Creacion del id
-    if (storage.length === 0) {
-      //si el arreglo contiene algo envia 1
-      return 1;
-    }
-    const orderedStorage = storage.sort((a, b) => a - b); //organizo de  menos a mayor
-    return orderedStorage[orderedStorage.length - 1].id + 1; //retorno el id
   }
 
   // CRUD
