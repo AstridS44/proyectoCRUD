@@ -196,3 +196,42 @@ footer ul li a:hover {
 .redes img {
   width: 50px;
 }
+
+.botoncito2 {
+  padding: 5px;
+  font-family: "Raleway", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  background-color: #4a9fb1;
+  border: 0px solid;
+  border-radius: 10px;
+  margin-top: 10px;
+  width: 80px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.botoncito2:hover {
+  background-color: #357380;
+  box-shadow: 1px 1px 20px #05466276;
+}
+
+.botoncito3 {
+  padding: 10px;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  background-color: #054662;
+  border: 0px solid;
+  border-radius: 15px;
+  margin-top: 10px;
+  width: 200px;
+  color: #fff;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.botoncito3:hover {
+  background-color: #4a9fb1;
+  box-shadow: 1px 1px 20px #05466276;
+}

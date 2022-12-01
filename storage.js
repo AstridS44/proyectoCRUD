@@ -1,7 +1,8 @@
 //Clase crea un campo
 class Storage {
-  constructor(key) {
+  constructor(key, converter) {
     this.key = key;
+    this.converter = converter;
     this.createStorage(); //traigo la info actual
   }
 
@@ -14,14 +15,25 @@ class Storage {
 
   parseStorage() {
     //traigo info del campo y aplico Jason
-    return JSON.parse(localStorage.getItem(this.key));
+    this.createStorage();
+    return JSON.parse(localStorage.getItem(this.key)).map((i) =>
+      this.converter(i)
+    );
   }
 
   saveStorage(storage) {
     //Guardo en el localStorage la info con clave e info
+    this.createStorage();
     localStorage.setItem(this.key, JSON.stringify(storage));
   }
 
+  getItemIfExists(id, current) {
+    const index = current.findIndex((item) => item.id === id);
+    if (index !== -1) {
+      return [current[index], index]; //si es igual al que traido me retorna el un arreglo con el objeto y su indice
+    }
+    return null;
+  }
   getNextId(storage) {
     //Creacion del id
     if (storage.length === 0) {
@@ -43,16 +55,15 @@ class Storage {
     return this.parseStorage();
   }
 
-  updateItem(id, updateItem) {
-    const current = this.parseStorage();
-    const index = current.findIndex((item) => {
-      return item.id === id;
-    });
+  updateItem(id, updateFunc) {
+    const current = this.parseStorage(); //traigo info del local storage y paso el jason
+    const item = this.getItemIfExists(id, current); //llamo a la funcion para que me compare el indice, le envio el actual
 
-    if (index !== -1) {
-      current[index].actividad = updateItem.actividad;
-      current[index].descripcion = updateItem.descripcion;
-      this.saveStorage(current);
+    if (!!item) {
+      //si existe el id
+      const [currentItem, index] = item;
+      current[index] = updateFunc(currentItem); //reemplazo la informacion
+      this.saveStorage(current); //guardo informacion en el localstorage
     }
   }
 
