@@ -37,11 +37,11 @@ function guardarCambios(event) {
 }
 
 function getDataTr(icon) {
-  const tr = icon.closest("tr");
+  const tr = icon.closest("tr"); //con esta funcion encuentro exactamente el tr
   const [id, actividad, descripcion] = Array.from(tr.children)
     .slice(0, -1)
-    .map((input) => input.innerText);
-  return { id, actividad, descripcion };
+    .map((input) => input.innerText); //trae el contenido de cada elemento
+  return { id, actividad, descripcion }; //retorno la info
 }
 
 function getInputData() {
@@ -59,9 +59,9 @@ function cleanInputs() {
 }
 
 function fillInputs(id, actividad, descripcion) {
-  document.querySelector('input[name="id"]').value = id;
-  document.querySelector('input[name="actividad"]').value = actividad;
-  document.querySelector('textarea[name="descripcion"]').value = descripcion;
+  document.querySelector('input[name="id"]').value = id; //mando el valor del id, este esta oculto no es visibel
+  document.querySelector('input[name="actividad"]').value = actividad; //mando la info de la actividad
+  document.querySelector('textarea[name="descripcion"]').value = descripcion; //mando la info de la descripcion
 }
 
 function populateTable(tareas) {
@@ -76,10 +76,8 @@ function createTr(tarea) {
   <td>${tarea.getId()}</td>
   <td>${tarea.getActividad()}</td>
   <td>${tarea.getDescripcion()}</td>
-<td>
- 
   <td><button  id="btonborrar"  type="button" class="botoncito2" onclick='edit(this)' >Editar<br> Actividad</button></td>
-  <td> <button  id="btonborrar"  type="button" class="botoncito2" onclick='destroy(this)' >Eliminar<br> Actividad</button></td> `;
+  <td> <button  id="btonborrar"  type="button" class="botoncito4" onclick='destroy(this)' >Eliminar<br> Actividad</button></td> `;
   const tr = document.createElement("tr"); //creo un elemento tipo fila
   tr.innerHTML = tdHTML; //le envio el contenido
   return tr; //retorno este tr al cuerpo de la tabla

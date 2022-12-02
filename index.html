@@ -41,27 +41,30 @@
              <input type="text" name="actividad" id="actividad" placeholder="Nombre de la actividad">
              <p><br></p>
              <label for="">Descripción</label><br/>
-             <textarea id="descripcion" name="descripcion" rows="10" cols="100" placeholder="Ingrese la descripción de la actividad"></textarea>
+             <textarea id="descripcion" name="descripcion" rows="10" cols="150" placeholder="Ingrese la descripción de la actividad"></textarea>
            
              <br/><br/>
-             
+             <div class="btn">
              <button class="botoncito" onclick="crearCampo()">Crear actividad</button>
              
              <button class="botoncito3" onclick="guardarCambios()">Guardar cambios</button>
-           
+            </div>
              
              
           </form>
           
         </div>
       </article>   
+      <hr style="width:80%; margin: 0px auto;">
       <section>
-        <table class="table">
+        <table class="table" >
         <thead>
           <tr>
             <th scope="col">ID</th>
             <th scope="col">Actividad</th>
             <th scope="col">Descripción</th>
+            <th colspan="2 "scope="col" style="text-align: center;"> Acción</th>
+           
           </tr>
         </thead>
         
