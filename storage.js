@@ -59,14 +59,14 @@ class Storage {
   }
 
   deleteItem(id) {
-    const current = this.parseStorage();
+    const current = this.parseStorage(); //capturo info actual del local storage y asigno
     const index = current.findIndex((item) => {
       return item.id === id;
     });
 
     if (index !== -1) {
-      current.splice(index, 1);
-      this.saveStorage(current);
+      current.splice(index, 1); //elimino el objeto que corresponde al indice
+      this.saveStorage(current); //guardo informacion en el localstorage
     }
   }
 }

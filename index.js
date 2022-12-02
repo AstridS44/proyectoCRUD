@@ -39,7 +39,7 @@ function guardarCambios(event) {
 function getDataTr(icon) {
   const tr = icon.closest("tr"); //con esta funcion encuentro exactamente el tr
   const [id, actividad, descripcion] = Array.from(tr.children)
-    .slice(0, -1)
+    .slice(0, -1) //me trae el contenido del arreglo excepto el último dato
     .map((input) => input.innerText); //trae el contenido de cada elemento
   return { id, actividad, descripcion }; //retorno la info
 }
