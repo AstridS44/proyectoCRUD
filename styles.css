@@ -235,3 +235,7 @@ footer ul li a:hover {
   background-color: #4a9fb1;
   box-shadow: 1px 1px 20px #05466276;
 }
+
+section {
+  height: auto;
+}

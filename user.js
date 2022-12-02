@@ -1,4 +1,4 @@
-class User {
+class Tarea {
   constructor(id, actividad, descripcion) {
     //Creo objeto usuario con 3 parametros
     this.id = id;
@@ -8,7 +8,7 @@ class User {
 
   static fromObject(data) {
     //devuelvo el usuario creado
-    return new User(data["id"], data["actividad"], data["descripcion"]);
+    return new Tarea(data["id"], data["actividad"], data["descripcion"]);
   }
   getId() {
     return this.id;
