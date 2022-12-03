@@ -324,5 +324,10 @@ table tr td {
   }
   .menu2 {
     display: content;
+    justify-content: space-between;
+    padding: 10px 50px;
+  }
+  #hamb {
+    width: 25px;
   }
 }

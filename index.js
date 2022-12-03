@@ -18,6 +18,15 @@ function crearCampo() {
   cleanInputs(); //limpio el formulario
 }
 
+function generateId() {
+  const numeros = "0123456789";
+  let resultado = "";
+  for (let i = 0; i < 3; i++) {
+    resultado += numeros.charAt(Math.floor(Math.random() * numeros.length));
+  }
+  return "ACT" + resultado;
+}
+
 function destroy(event) {
   const { id } = getDataTr(event);
   tareas.deleteItem(id);
@@ -83,17 +92,6 @@ function createTr(tarea) {
   return tr; //retorno este tr al cuerpo de la tabla
 }
 
-function generateId() {
-  const caracteres =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-  let resultado = "";
-  for (let i = 0; i < 5; i++) {
-    resultado += caracteres.charAt(
-      Math.floor(Math.random() * caracteres.length)
-    );
-  }
-  return resultado;
-}
 window.onload = () => {
   populateTable(tareas.readItems());
 };
